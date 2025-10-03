@@ -13,12 +13,12 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean compile -s settings.xml -U  # -U forces dependency updates
+      - mvn -s settings.xml package
 
   post_build:
     commands:
       - echo Build completed on `date`
-      - mvn clean package -s settings.xml -U
+      - mvn -s settings.xml package
 
 artifacts:
   files:
